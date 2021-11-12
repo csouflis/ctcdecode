@@ -58,12 +58,6 @@ DecoderState::next(const std::vector<std::vector<double>> &probs_seq)
 {
   // dimension check
   size_t num_time_steps = probs_seq.size();
-  for (size_t i = 0; i < num_time_steps; ++i) {
-    VALID_CHECK_EQ(probs_seq[i].size(),
-                   vocabulary.size(),
-                   "The shape of probs_seq does not match with "
-                   "the shape of the vocabulary");
-  }
 
   // prefix search over time
   for (size_t time_step = 0; time_step < num_time_steps; ++time_step, ++abs_time_step) {
