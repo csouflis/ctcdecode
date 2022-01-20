@@ -133,9 +133,8 @@ setup(
     name="ctcdecode",
     version="1.0.3",
     description="CTC Decoder for PyTorch based on Paddle Paddle's implementation",
-    url="https://github.com/parlance/ctcdecode",
-    author="Ryan Leary",
-    author_email="ryanleary@gmail.com",
+    url="https://github.com/csouflis/ctcdecode",
+    author="Chris",
     # Exclude the build files.
     packages=find_packages(exclude=["build"]),
     ext_modules=[extension],
